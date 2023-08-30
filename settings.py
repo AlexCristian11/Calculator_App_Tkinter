@@ -28,11 +28,11 @@ NUM_POSITIONS = {
 }
 
 MATH_POSITIONS = {
-    '/': {'col': 3, 'row': 2, 'character': '', 'operator': '/'},
-    '*': {'col': 3, 'row': 3, 'character': 'x', 'operator': '/'},
-    '-': {'col': 3, 'row': 4, 'character': '-', 'operator': '/'},
-    '=': {'col': 3, 'row': 6, 'character': '=', 'operator': '/'},
-    '+': {'col': 3, 'row': 5, 'character': '+', 'operator': '/'}
+    '/': {'col': 3, 'row': 2, 'character': '/'},
+    '*': {'col': 3, 'row': 3, 'character': 'x'},
+    '-': {'col': 3, 'row': 4, 'character': '-'},
+    '=': {'col': 3, 'row': 6, 'character': '='},
+    '+': {'col': 3, 'row': 5, 'character': '+'}
 }
 
 OPERATORS = {

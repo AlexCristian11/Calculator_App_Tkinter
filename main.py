@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from buttons import Button, NumButton
+from buttons import Button, NumButton, MathButton
 import darkdetect
 from settings import *
 try:
@@ -87,7 +87,22 @@ class Calculator(ctk.CTk):
                 span=data['span']
             )
 
+        # operators
+        for operator, data in MATH_POSITIONS.items():
+            MathButton(
+                parent=self,
+                text=data['character'],
+                operator=operator,
+                func=self.operator_press,
+                col=data['col'],
+                row=data['row'],
+                font=main_font
+            )
+
     def num_press(self, value):
+        print(value)
+
+    def operator_press(self, value):
         print(value)
 
     def clear(self):

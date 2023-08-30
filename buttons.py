@@ -30,3 +30,16 @@ class NumButton(Button):
             span=span
         )
 
+
+class MathButton(Button):
+    def __init__(self, parent, text, operator,  func, col, row, font, color='orange'):
+        super().__init__(
+            parent,
+            text=text,
+            func=lambda: func(operator),
+            col=col,
+            row=row,
+            font=font,
+            color=color
+        )
+
