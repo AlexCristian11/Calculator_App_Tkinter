@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from buttons import Button
 import darkdetect
 from settings import *
 try:
@@ -19,7 +20,6 @@ class Calculator(ctk.CTk):
         self.title('')
         self.iconbitmap('empty.ico')
         self.title_bar_color(is_dark)
-
 
         # layout
         self.rowconfigure(list(range(MAIN_ROWS)), weight=1, uniform='a')
@@ -44,6 +44,45 @@ class Calculator(ctk.CTk):
         # output labels
         OutputLabel(self, 0, 'SE', main_font, self.formula_string)  # formula
         OutputLabel(self, 1, "E", result_font, self.result_string)  # result
+
+        # clear AC button
+        Button(
+            self,
+            func=self.clear,
+            text=OPERATORS['clear']['text'],
+            col=OPERATORS['clear']['col'],
+            row=OPERATORS['clear']['row'],
+            font=main_font
+        )
+
+        # percentage button
+        Button(
+            self,
+            func=self.percent,
+            text=OPERATORS['percent']['text'],
+            col=OPERATORS['percent']['col'],
+            row=OPERATORS['percent']['row'],
+            font=main_font
+        )
+
+        # invert button
+        Button(
+            self,
+            func=self.invert,
+            text=OPERATORS['invert']['text'],
+            col=OPERATORS['invert']['col'],
+            row=OPERATORS['invert']['row'],
+            font=main_font
+        )
+
+    def clear(self):
+        print('clear')
+
+    def percent(self):
+        print('percent')
+
+    def invert(self):
+        print('invert')
 
     def title_bar_color(self, is_dark):
         try:
