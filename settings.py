@@ -1,6 +1,6 @@
 # size
 APP_SIZE = (400, 700)
-MAIN_ROWS = 77
+MAIN_ROWS = 7
 MAIN_COLUMNS = 4
 
 # text
@@ -48,7 +48,7 @@ COLORS = {
     'orange-highlight': {'fg': 'white', 'hover': 'white', 'text': ('black', '#FF9500')},
 }
 
-TITLE_BAR_COLORS = {
+TITLE_BAR_HEX_COLORS = {
     'dark': 0x00000000,
     'light': 0x00EEEEEE
 }
