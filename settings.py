@@ -9,7 +9,7 @@ OUTPUT_FONT_SIZE = 70
 NORMAL_FONT_SIZE = 32
 
 STYLING = {
-    'gap': .5,
+    'gap': 0.3,
     'corner-radius': 0
 }
 

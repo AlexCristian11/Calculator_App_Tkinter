@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from buttons import Button
+from buttons import Button, NumButton
 import darkdetect
 from settings import *
 try:
@@ -52,7 +52,7 @@ class Calculator(ctk.CTk):
             text=OPERATORS['clear']['text'],
             col=OPERATORS['clear']['col'],
             row=OPERATORS['clear']['row'],
-            font=main_font
+            font=main_font,
         )
 
         # percentage button
@@ -74,6 +74,21 @@ class Calculator(ctk.CTk):
             row=OPERATORS['invert']['row'],
             font=main_font
         )
+
+        # number buttons
+        for num, data in NUM_POSITIONS.items():
+            NumButton(
+                parent=self,
+                text=num,
+                func=self.num_press,
+                col=data['col'],
+                row=data['row'],
+                font=main_font,
+                span=data['span']
+            )
+
+    def num_press(self, value):
+        print(value)
 
     def clear(self):
         print('clear')
